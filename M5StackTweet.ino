@@ -22,7 +22,7 @@ void setup()
   M5.Lcd.println("connected");
   M5.Lcd.println((WiFi.localIP()));
   if (client.connect("api.thingspeak.com",80)) {
-    tsData = "api_key="+thingtweetAPIKey+"&status="+"This tweet was sent by my M5Stack";
+    tsData = "api_key="+thingtweetAPIKey+"&status="+"This tweet was sent by my #M5Stack";
     client.print("POST /apps/thingtweet/1/statuses/update HTTP/1.1\n");
     client.print("Host: api.thingspeak.com\n");
     client.print("Connection: close\n");
